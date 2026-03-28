@@ -58,19 +58,19 @@ It may take 1–2 minutes to go live after saving.
 
 6 — Create a Pull Request
 
-1.Go to your forked repo on GitHub.
-2.Click Compare & pull request (banner at the top).
-3.Add a clear title and description of what you changed.
-4.Click Create pull request
+1.Go to your forked repo on GitHub.     
+2.Click Compare & pull request (banner at the top).      
+3.Add a clear title and description of what you changed.      
+4.Click Create pull request     
 
 7.Tech Stack
 
-1.HTML5 — semantic markup
-2.CSS3 — custom properties, flexbox, keyframe animations
-3.JavaScript — Canvas API, IntersectionObserver, typewriter effect
-4.Google Fonts — JetBrains Mono + DM Serif Display
-5.Unsplash — open-license photography for event cards
-6.GitHub Pages — free, open-source deployment
+1.HTML5 — semantic markup     
+2.CSS3 — custom properties, flexbox, keyframe animations     
+3.JavaScript — Canvas API, IntersectionObserver, typewriter effect    
+4.Google Fonts — JetBrains Mono + DM Serif Display      
+5.Unsplash — open-license photography for event cards     
+6.GitHub Pages — free, open-source deployment      
 
 
 
