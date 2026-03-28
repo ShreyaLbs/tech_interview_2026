@@ -38,6 +38,41 @@ Write a clear, descriptive commit message:
 ```bash
 git commit -m "feat: add contact section, event cards, and register page"
 ```
+Push to your forked repository:
+```bash
+git push origin main
+```
+5 — Deploy with GitHub Pages
+
+1.Go to your forked repository on GitHub.
+2.Click Settings → Pages (left sidebar).
+3.Under Source, select branch main and folder / (root).
+4.Click Save.
+
+Your live site will appear at:
+```bash
+https://shreyalbs.github.io/tech_interview_2026/
+```
+It may take 1–2 minutes to go live after saving.
+
+
+6 — Create a Pull Request
+
+1.Go to your forked repo on GitHub.
+2.Click Compare & pull request (banner at the top).
+3.Add a clear title and description of what you changed.
+4.Click Create pull request
+
+7.Tech Stack
+
+1.HTML5 — semantic markup
+2.CSS3 — custom properties, flexbox, keyframe animations
+3.JavaScript — Canvas API, IntersectionObserver, typewriter effect
+4.Google Fonts — JetBrains Mono + DM Serif Display
+5.Unsplash — open-license photography for event cards
+6.GitHub Pages — free, open-source deployment
+
+
 
 
 
