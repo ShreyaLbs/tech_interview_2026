@@ -1,31 +1,278 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FOSS Club Events</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FOSS Club — LBS Institute of Technology for Women</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>FOSS Club</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Events</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!--
+    hey, if you're reading this in devtools —
+    yeah i spent way too long getting that terminal typewriter timing to feel right.
+    the dot grid was 100% worth keeping. tried removing it once. bad idea.
+    the cursor ring lag is lerp-based, not a css transition — feels much more natural.
+    — [Shreya Ajith], LBSITW 2026
+  -->
 
-    <h2>Upcoming Events</h2>
+  
+  <canvas id="grid-canvas"></canvas>
 
+  
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
-      <div class="card">
-        <h3>GIT HUB Basics</h3>
-        <p class="date">April 10, 2026</p>
-        <p>Learn basics of GIT HUB</p>
-        <button>Register</button>
+  
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-wordmark">
+      <img src="foss-logo.png" alt="FOSS Club LBSITW" class="nav-logo" />
+    </a>
+    <div class="nav-pill">LBSITW &nbsp;·&nbsp; Thiruvananthapuram</div>
+    <ul class="nav-links">
+      <li><a href="#home">home</a></li>
+      <li><a href="#events">events</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <section class="hero" id="home">
+
+    
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">bash &mdash; foss@lbsitw</span>
+      </div>
+      <div class="terminal-body">
+        <p>
+          <span class="t-prompt">foss@lbsitw:~$&nbsp;</span><span
+            id="typeTarget" class="t-cmd"></span><span class="t-caret" id="caret">█</span>
+        </p>
+        <div id="termOutput" class="t-output">
+          <p><span class="t-green">✔</span>&nbsp; Welcome to <strong>FOSS Club</strong></p>
+          <p><span class="t-green">✔</span>&nbsp; LBS Institute of Technology for Women</p>
+          <p><span class="t-green">✔</span>&nbsp; Building women in open source since 2024</p>
+          <p>&nbsp;</p>
+          <p class="t-hint"># Run <span class="t-cyan">./explore-events</span> to get started ↓</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="hero-text">
+      <p class="hero-eyebrow">// Free &amp; Open Source Software Club</p>
+      <h1>
+        <span class="h1-line">Build.</span>
+        <span class="h1-line italic">Contribute.</span>
+        <span class="h1-line">Liberate.</span>
+      </h1>
+      <p class="hero-sub">
+        We don't just use open source — we <em>are</em> open source.
+        Join workshops, hackathons, and real-world collaborations.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#events" class="btn-primary">./explore-events &nbsp;→</a>
+        <a href="#contact" class="btn-ghost">get in touch</a>
+      </div>
+    </div>
+
+    
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">5+</span><span class="stat-l">Events / Year</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">∞</span><span class="stat-l">Open Source</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Free to Join</span></div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="sc-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  
+  <section class="events-section" id="events">
+    <div class="section-intro reveal">
+      <p class="section-label">01&nbsp;/&nbsp;events</p>
+      <h2>Upcoming<br/><em>Events</em></h2>
+      <p class="section-sub">Hands-on, free, and open to everyone at LBSITW.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      
+      <article class="card reveal" style="--i:0">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&q=80"
+               alt="Git and GitHub workshop" loading="lazy" />
+          <span class="card-tag">Workshop</span>
+          <span class="card-idx">01</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><time>Apr 10, 2026</time> <span>·</span> <span>2 hrs</span></div>
+          <h3>Git &amp; GitHub Basics</h3>
+          <p>Master version control from scratch — branching, merging, PRs and real collaborative workflows on GitHub.</p>
+          <div class="card-foot">
+            <a href="register.html" class="card-btn">Register <span>→</span></a>
+            <span class="card-seats">Limited seats</span>
+          </div>
+        </div>
+      </article>
+
+      
+      <article class="card reveal" style="--i:1">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&q=80"
+               alt="Linux terminal CLI" loading="lazy" />
+          <span class="card-tag">Bootcamp</span>
+          <span class="card-idx">02</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><time>Apr 17, 2026</time> <span>·</span> <span>3 hrs</span></div>
+          <h3>Linux CLI Bootcamp</h3>
+          <p>Navigate the filesystem like a pro, write shell scripts, manage processes and feel at home in any terminal.</p>
+          <div class="card-foot">
+            <a href="register.html" class="card-btn">Register <span>→</span></a>
+            <span class="card-seats">Limited seats</span>
+          </div>
+        </div>
+      </article>
+
+      
+      <article class="card featured reveal" style="--i:2">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80"
+               alt="Hackathon coding" loading="lazy" />
+          <span class="card-tag accent">Hackathon</span>
+          <span class="card-idx">03</span>
+          <div class="featured-banner">⭐ Featured</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><time>May 3, 2026</time> <span>·</span> <span>24 hrs</span></div>
+          <h3>FOSS Hackathon 2026</h3>
+          <p>Build something real in 24 hours using only open-source tools. Team up, solve problems, win prizes — and ship it to the world.</p>
+          <div class="card-foot">
+            <a href="register.html" class="card-btn">Register <span>→</span></a>
+            <span class="card-seats">Teams of 2–4</span>
+          </div>
+        </div>
+      </article>
+
+      
+      <article class="card reveal" style="--i:3">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80"
+               alt="AI tools" loading="lazy" />
+          <span class="card-tag">Talk</span>
+          <span class="card-idx">04</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><time>May 10, 2026</time> <span>·</span> <span>1.5 hrs</span></div>
+          <h3>Open Source AI Tools</h3>
+          <p>Explore Hugging Face, Ollama, and LangChain. Run powerful AI models locally — no API keys, no cloud lock-in.</p>
+          <div class="card-foot">
+            <a href="register.html" class="card-btn">Register <span>→</span></a>
+            <span class="card-seats">Limited seats</span>
+          </div>
+        </div>
+      </article>
+
+      
+      <article class="card reveal" style="--i:4">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+               alt="Web development" loading="lazy" />
+          <span class="card-tag">Workshop</span>
+          <span class="card-idx">05</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><time>May 17, 2026</time> <span>·</span> <span>3 hrs</span></div>
+          <h3>Web Dev with FOSS Stack</h3>
+          <p>Build and deploy a complete site using only open-source tools — HTML, CSS, JS and GitHub Pages. Zero paid software.</p>
+          <div class="card-foot">
+            <a href="register.html" class="card-btn">Register <span>→</span></a>
+            <span class="card-seats">Limited seats</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  
+  <section class="contact-section reveal" id="contact">
+    <div class="contact-inner">
+
+      <div class="contact-left">
+        <p class="section-label">02&nbsp;/&nbsp;contact</p>
+        <h2>Let's<br/><em>Connect</em></h2>
+        <p class="section-sub">Curious about events, want to volunteer, or just want to say hi? We're always open.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="ci-label">// email</span>
+            <a href="mailto:fossclub@lbsitw.ac.in" class="ci-value">fossclub@lbsitw.ac.in</a>
+          </li>
+          <li>
+            <span class="ci-label">// location</span>
+            <span class="ci-value">LBS Institute of Technology for Women,<br>Thiruvananthapuram, Kerala — 695012</span>
+          </li>
+          <li>
+            <span class="ci-label">// github</span>
+            <a href="https://github.com/FOSSCLUB-LBSITW" target="_blank" rel="noopener" class="ci-value">github.com/FOSSCLUB-LBSITW</a>
+          </li>
+        </ul>
       </div>
 
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" placeholder="Jane Doe" required autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="jane@example.com" required autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="What's this about?" required/>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" id="submitBtn">
+              Send Message &nbsp;→
+            </button>
+          </div>
+          <p class="form-success" id="formSuccess">✓ &nbsp;Message received! We'll be in touch soon.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="foss-logo.png" alt="FOSS CLUB" class="footer-logo" />
+      <span class="footer-copy">LBS Institute of Technology for Women &nbsp;·&nbsp; © 2026</span>
+      <span class="footer-love">Made with ♥</span>
+    </div>
+    <!-- build log: v1.0 initial template · v1.1 event cards + contact section · v1.2 dark theme + terminal animation · v1.3 logo added, cursor fixed, scroll-reveal -->
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
