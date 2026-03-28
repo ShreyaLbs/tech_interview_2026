@@ -72,7 +72,7 @@ It may take 1–2 minutes to go live after saving.
 5.Unsplash — open-license photography for event cards     
 6.GitHub Pages — free, open-source deployment      
 
-8.License
+8.License    
 This project is open-source under the MIT License.
 
 
