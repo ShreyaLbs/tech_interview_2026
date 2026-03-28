@@ -44,9 +44,9 @@ git push origin main
 ```
 5 — Deploy with GitHub Pages
 
-1.Go to your forked repository on GitHub.\n
-2.Click Settings → Pages (left sidebar).
-3.Under Source, select branch main and folder / (root).
+1.Go to your forked repository on GitHub.    
+2.Click Settings → Pages (left sidebar).    
+3.Under Source, select branch main and folder / (root).  
 4.Click Save.
 
 Your live site will appear at:
