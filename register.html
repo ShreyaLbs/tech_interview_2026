@@ -5,231 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register — FOSS Club</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink:   #0c0e0f;
-      --paper: #f5f2eb;
-      --green: #00c27a;
-      --muted: #7a7469;
-      --ff-mono:  'JetBrains Mono', monospace;
-      --ff-serif: 'DM Serif Display', Georgia, serif;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      background: var(--ink);
-      color: var(--paper);
-      font-family: var(--ff-mono);
+      font-family: 'Poppins', sans-serif;
+      background-color: #dbeafe;
+      color: #0f172a;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    #canvas {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.2;
-    }
-
-    /* Nav */
     nav {
-      position: relative;
-      z-index: 10;
+      background-color: #0f172a;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.2rem 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
-    .nav-wm {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-logo {
-      width: 42px;
-      height: 42px;
+    nav img {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      object-fit: cover;
-      filter: brightness(1.4);
-      border: 2px solid rgba(0,194,122,0.4); /* green ring so it pops on dark bg */
-      box-shadow: 0 0 12px rgba(0,194,122,0.2);
-    } 
-
-    .nav-back {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.4);
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 6px 14px;
-      border-radius: 6px;
-      transition: color 0.2s, border-color 0.2s;
     }
-    .nav-back:hover { color: var(--paper); border-color: rgba(255,255,255,0.3); }
 
-    /* Main */
+    nav a.back-btn {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a.back-btn:hover {
+      text-decoration: underline;
+    }
+
     main {
-      position: relative;
-      z-index: 1;
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .badge {
-      font-size: 0.68rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green);
-      border: 1px solid rgba(0,194,122,0.35);
-      padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 2.5rem;
-      display: inline-block;
-      animation: fadeUp 0.5s ease both;
+      padding: 3rem 1.5rem;
     }
 
     h1 {
-      font-family: var(--ff-serif);
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: 1.08;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.5s 0.1s ease both;
-    }
-    h1 em {
-      font-style: italic;
-      background: linear-gradient(90deg, var(--green), #5dffc0, var(--green));
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shimmer 4s linear infinite;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
     }
 
-    .sub {
-      color: rgba(245,242,235,0.45);
-      font-size: 0.88rem;
-      max-width: 420px;
-      line-height: 1.8;
-      margin-bottom: 3rem;
-      animation: fadeUp 0.5s 0.2s ease both;
+    h1 span {
+      color: #2563eb;
     }
 
-    .coming-soon-box {
-      display: flex;
-      align-items: center;
-      background: rgba(245,242,235,0.04);
-      border: 1px solid rgba(245,242,235,0.1);
-      border-radius: 10px;
-      padding: 1.4rem 2.5rem;
-      font-size: 0.8rem;
-      color: rgba(245,242,235,0.6);
-      letter-spacing: 0.04em;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.5s 0.3s ease both;
+    p {
+      color: #475569;
+      font-size: 1rem;
+      max-width: 400px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
     }
-    .csb-cursor { color: var(--green); animation: blink 1s step-end infinite; margin-left: 4px; }
 
     a.btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0.7rem 1.6rem;
-      background: var(--green);
-      color: #fff;
-      font-family: var(--ff-mono);
-      font-size: 0.8rem;
-      font-weight: 700;
-      border-radius: 7px;
+      background-color: #2563eb;
+      color: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 8px;
       text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
-      animation: fadeUp 0.5s 0.4s ease both;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
-    a.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,194,122,0.3); }
+
+    a.btn:hover {
+      background-color: #1d4ed8;
+    }
 
     footer {
-      position: relative;
-      z-index: 1;
       text-align: center;
-      padding: 1.4rem;
-      font-size: 0.7rem;
-      color: rgba(245,242,235,0.2);
-      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 1.2rem;
+      font-size: 0.8rem;
+      color: #64748b;
+      border-top: 1px solid #bfdbfe;
     }
-
-    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
-    @keyframes blink  { 0%,100%{opacity:1} 50%{opacity:0} }
-    @keyframes shimmer { to { background-position: 200% center; } }
   </style>
 </head>
 <body>
 
-  <canvas id="canvas"></canvas>
-
   <nav>
-    <a href="index.html" class="nav-wm">
-      <img src="foss-logo.png" alt="FOSS Club" class="nav-logo" />
-    </a>
-    <a href="index.html" class="nav-back">← Back to events</a>
+    <img src="foss-logo.png" alt="FOSS Club Logo" />
+    <a href="index.html" class="back-btn">← Back to Home</a>
   </nav>
 
   <main>
-    <div class="badge">// Registration Portal</div>
-
-    <h1>Registrations will be<br/><em>opening soon!</em></h1>
-
-    <p class="sub">
-      We're finalising the details for this event.
-      Drop your email in the contact form and we'll notify you the moment registrations open.
-    </p>
-
-    <div class="coming-soon-box">
-      <span>foss@lbsitw:~$ ./register --status</span>
-      <span class="csb-cursor">█</span>
-    </div>
-
-    <a href="index.html#contact" class="btn">Notify me →</a>
+    <h1>Registrations will be <span>opening soon!</span></h1>
+    <p>We're still working out the details for this event. Check back soon or use the contact form on the home page to get notified when registrations open.</p>
+    <a href="index.html#contact" class="btn">Go to Contact</a>
   </main>
 
   <footer>FOSS Club · LBS Institute of Technology for Women · Thiruvananthapuram</footer>
-
-  <script>
-    const c = document.getElementById('canvas');
-    const ctx = c.getContext('2d');
-    let W, H;
-    function resize() { W = c.width = innerWidth; H = c.height = innerHeight; }
-    resize();
-    window.addEventListener('resize', resize);
-
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-      ctx.fillStyle = 'rgba(245,242,235,0.6)';
-      const sp = 36, t = Date.now() / 3000;
-      for (let x = sp/2; x < W; x += sp) {
-        for (let y = sp/2; y < H; y += sp) {
-          const wave = Math.sin(x/80 + t) * Math.cos(y/80 + t) * 0.5 + 0.5;
-          ctx.globalAlpha = wave * 0.7;
-          ctx.beginPath();
-          ctx.arc(x, y, 1.4, 0, Math.PI*2);
-          ctx.fill();
-        }
-      }
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(draw);
-    }
-    draw();
-  </script>
 
 </body>
 </html>
