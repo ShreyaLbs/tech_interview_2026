@@ -1,5 +1,4 @@
-/* FOSS Club — style.css
-   Shreya Ajith, LBSITW 2026 */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -39,7 +38,6 @@ img {
   display: block;
 }
 
-/* ── Navbar ── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -85,13 +83,14 @@ img {
   color: #fff;
 }
 
-/* ── Hero ── */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 100px 2rem 4rem;
-  background: var(--navy);
+  background-color: var(--navy);
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: #fff;
 }
 
@@ -131,7 +130,7 @@ img {
   transform: translateY(-2px);
 }
 
-/* ── Events ── */
+
 .events-section {
   padding: 5rem 2rem;
   max-width: 1200px;
@@ -150,7 +149,6 @@ img {
   font-size: 0.95rem;
 }
 
-/* Cards grid — flexbox */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;
@@ -297,7 +295,6 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--blue);
-  /* using blue accent for labels */
 }
 
 .contact-list a,
@@ -311,7 +308,7 @@ img {
   color: #fff;
 }
 
-/* Contact form */
+
 .contact-right {
   flex: 1 1 320px;
 }
@@ -390,7 +387,7 @@ img {
   display: block;
 }
 
-/* ── Footer ── */
+
 .footer {
   background: #060e1a;
   padding: 1.5rem 2rem;
@@ -405,7 +402,7 @@ img {
   color: rgba(255,255,255,0.3);
 }
 
-/* ── Responsive ── */
+
 @media (max-width: 768px) {
   .nav-links { gap: 1rem; }
   .hero-content { text-align: left; }
