@@ -24,26 +24,41 @@
 
     nav {
       background-color: #0f172a;
-      padding: 1rem 2rem;
+      padding: 0 2rem;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
     nav img {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav-brand span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
     nav a.back-btn {
-      color: white;
+      color: rgba(255,255,255,0.75);
       text-decoration: none;
       font-size: 0.9rem;
     }
 
     nav a.back-btn:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
     main {
@@ -54,12 +69,16 @@
       justify-content: center;
       text-align: center;
       padding: 3rem 1.5rem;
+      background-color: #0f172a;
+      background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: #fff;
     }
 
     h1 {
       font-size: 2.2rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #fff;
       margin-bottom: 0.5rem;
     }
 
@@ -68,11 +87,12 @@
     }
 
     p {
-      color: #475569;
+      color: rgba(255,255,255,0.6);
       font-size: 1rem;
       max-width: 400px;
       line-height: 1.7;
       margin-bottom: 2rem;
+      margin-top: 1rem;
     }
 
     a.btn {
@@ -92,16 +112,20 @@
     footer {
       text-align: center;
       padding: 1.2rem;
-      font-size: 0.8rem;
-      color: #64748b;
-      border-top: 1px solid #bfdbfe;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      background: #060e1a;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <img src="foss-logo.png" alt="FOSS Club Logo" />
+    <a href="index.html" class="nav-brand">
+      <img src="foss-logo.png" alt="FOSS Club Logo" />
+      <span>FOSS Club</span>
+    </a>
     <a href="index.html" class="back-btn">← Back to Home</a>
   </nav>
 
@@ -111,7 +135,7 @@
     <a href="index.html#contact" class="btn">Go to Contact</a>
   </main>
 
-  <footer>FOSS Club · LBS Institute of Technology for Women · Thiruvananthapuram</footer>
+  <footer>FOSS Club LBSITW</footer>
 
 </body>
 </html>
