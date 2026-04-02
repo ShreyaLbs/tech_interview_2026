@@ -36,7 +36,7 @@ git add .
 ```
 Write a clear, descriptive commit message:
 ```bash
-git commit -m "feat: add contact section, event cards, and register page"
+git commit -m "feat: add contact section, event cards"
 ```
 Push to your forked repository:
 ```bash
@@ -63,16 +63,8 @@ It may take 1–2 minutes to go live after saving.
 3.Add a clear title and description of what you changed.      
 4.Click Create pull request     
 
-7.Tech Stack
 
-1.HTML5 — semantic markup     
-2.CSS3 — custom properties, flexbox, keyframe animations     
-3.JavaScript — Canvas API, IntersectionObserver, typewriter effect    
-4.Google Fonts — JetBrains Mono + DM Serif Display      
-5.Unsplash — open-license photography for event cards     
-6.GitHub Pages — free, open-source deployment      
-
-8.License    
+7.License    
 This project is open-source under the MIT License.
 
 
